@@ -412,7 +412,7 @@ gst_dvbvideosink_base_init (gpointer klass)
 		FILE *file = fopen("/proc/cpuinfo", "r");
 		while (fgets(line, sizeof(line) - 1, file) != NULL)
 		{
-			if (!strncmp(line, "cpu type", 8))
+			if (!strncmp(line, "cpu model", 9))
 			{
 				strtok (line,":");
 				processor = strtok (NULL,":");
